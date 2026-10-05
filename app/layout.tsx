@@ -9,15 +9,14 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   title: "Souad Alsayed | Frontend Developer",
-  description: "Souad Alsayed | Frontend Developer & Software Engineer",
+  description:
+    "Portfolio of Souad Alsayed, a software engineer & frontend developer",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className={`${firaCode.className} min-h-full flex flex-col`}>
-        {children}
-      </body>
+    <html lang="en">
+      <body className={`${firaCode.className} antialiased`}>{children}</body>
     </html>
   );
 }
