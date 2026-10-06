@@ -3,7 +3,7 @@
 :root {
   --background: #282c33;
   --foreground: #ffffff;
-  --primary: #c778dd;
+  --primary: rgb(199, 120, 221);
   --secondary: #abb2bf;
 }
 
@@ -12,9 +12,22 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+
+  --font-pixel: var(--pixelify-sans);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+@keyframes float-frame {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }

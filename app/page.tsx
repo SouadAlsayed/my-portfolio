@@ -7,7 +7,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <SocialSidebar />
-      <main className="mx-auto w-full max-w-6xl px-6">
+      <main className="mx-auto w-full">
         <Hero />
       </main>
     </div>
