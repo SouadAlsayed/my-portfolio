@@ -1,6 +1,6 @@
 "use client";
 import { HugeiconsIcon } from "@hugeicons/react";
-import Link from "next/link";
+
 import { socialLinks } from "./Navbar";
 
 export default function SocialSidebar() {
@@ -11,13 +11,18 @@ export default function SocialSidebar() {
 
         <div className="flex flex-col gap-5 py-5">
           {socialLinks.map((l) => (
-            <Link href={l.href} key={l.label}>
+            <a
+              href={l.href}
+              key={l.label}
+              target={l.label === "email" ? undefined : "_blank"}
+              rel={l.label === "email" ? undefined : "noopener noreferrer"}
+            >
               <HugeiconsIcon
                 size={24}
                 icon={l.icon}
                 className="transition-colors hover:text-white"
               />
-            </Link>
+            </a>
           ))}
         </div>
       </div>

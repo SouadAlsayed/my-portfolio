@@ -40,7 +40,7 @@ export const socialLinks = [
   },
   {
     icon: Mail01Icon,
-    href: "souadalsayed.dev@gmail.com",
+    href: "mailto:souadalsayed.dev@gmail.com",
     label: "email",
   },
 ];
@@ -93,13 +93,18 @@ function Navbar() {
             ))}
             <div className="flex justify-center items-center gap-5">
               {socialLinks.map((l) => (
-                <Link href={l.href} key={l.label}>
+                <a
+                  href={l.href}
+                  key={l.label}
+                  target={l.label === "email" ? undefined : "_blank"}
+                  rel={l.label === "email" ? undefined : "noopener noreferrer"}
+                >
                   <HugeiconsIcon
                     size={24}
                     icon={l.icon}
                     className="transition-colors hover:text-white"
                   />
-                </Link>
+                </a>
               ))}
             </div>
           </div>
