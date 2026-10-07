@@ -14,13 +14,14 @@ export default function SocialSidebar() {
             <a
               href={l.href}
               key={l.label}
+              title={l.label}
               target={l.label === "email" ? undefined : "_blank"}
               rel={l.label === "email" ? undefined : "noopener noreferrer"}
             >
               <HugeiconsIcon
                 size={24}
                 icon={l.icon}
-                className="transition-colors hover:text-white"
+                className="transition-colors hover:text-primary"
               />
             </a>
           ))}

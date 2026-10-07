@@ -9,7 +9,7 @@ import {
 } from "@hugeicons/core-free-icons";
 import Link from "next/link";
 import { useState } from "react";
-const navbarItems = [
+export const navbarItems = [
   {
     name: "home",
     href: "#home",
