@@ -48,8 +48,8 @@ function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <header className="relative bg-background text-secondary">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-end sm:justify-center px-6">
+    <header className="absolute inset-x-0 z-50 top-0 text-secondary">
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-end sm:justify-center px-6 z-50">
         <div className="hidden items-center gap-10 sm:flex">
           {navbarItems.map((i) => (
             <Link
@@ -65,7 +65,7 @@ function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="sm:hidden"
+          className="sm:hidden z-50"
           onClick={() => setOpenMenu((menu) => !menu)}
         >
           <HugeiconsIcon
@@ -76,39 +76,48 @@ function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile navigation */}
       {openMenu && (
-        <div className="border-t border-secondary px-6 py-6 sm:hidden">
-          <div className="flex flex-col gap-6">
-            {navbarItems.map((item) => (
-              <Link
-                href={item.href}
-                key={item.name}
-                className="transition-colors hover:text-white"
-                onClick={() => setOpenMenu(false)}
-              >
-                <span className="text-primary">#</span>
-                {item.name}
-              </Link>
-            ))}
-            <div className="flex justify-center items-center gap-5">
-              {socialLinks.map((l) => (
-                <a
-                  href={l.href}
-                  key={l.label}
-                  target={l.label === "email" ? undefined : "_blank"}
-                  rel={l.label === "email" ? undefined : "noopener noreferrer"}
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-[2px] sm:hidden"
+            onClick={() => setOpenMenu(false)}
+          />
+          {/* Mobile navigation */}
+          <div className="absolute left-0 right-0 top-16 z-50 border-t border-secondary bg-background px-6 py-6 shadow-lg sm:hidden">
+            <div className="flex flex-col gap-6">
+              {navbarItems.map((item) => (
+                <Link
+                  href={item.href}
+                  key={item.name}
+                  className="transition-colors hover:text-white"
+                  onClick={() => setOpenMenu(false)}
                 >
-                  <HugeiconsIcon
-                    size={24}
-                    icon={l.icon}
-                    className="transition-colors hover:text-white"
-                  />
-                </a>
+                  <span className="text-primary">#</span>
+                  {item.name}
+                </Link>
               ))}
+              <div className="flex justify-center items-center gap-5">
+                {socialLinks.map((l) => (
+                  <a
+                    href={l.href}
+                    key={l.label}
+                    target={l.label === "email" ? undefined : "_blank"}
+                    rel={
+                      l.label === "email" ? undefined : "noopener noreferrer"
+                    }
+                  >
+                    <HugeiconsIcon
+                      size={24}
+                      icon={l.icon}
+                      className="transition-colors hover:text-white"
+                    />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );
