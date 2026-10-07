@@ -51,7 +51,7 @@ function Hero() {
         </p>
         <Link
           className="w-fit px-5 py-2 border border-primary bg-background hover:bg-[rgba(199,120,221,0.16)] transition-colors"
-          href="#contact"
+          href="#contacts"
         >
           Contact me
         </Link>

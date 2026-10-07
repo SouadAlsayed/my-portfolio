@@ -12,7 +12,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="px-10 py-16 md:px-30 md:py-20 text-secondary relative
+      className="px-10 py-16 md:px-30 md:py-20 text-secondary min-h-screen relative 
     after:pointer-events-none
     after:absolute
     after:top-[300px]

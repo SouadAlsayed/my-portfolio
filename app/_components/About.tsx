@@ -6,7 +6,7 @@ function About() {
   return (
     <section
       id="about-me"
-      className="px-10 py-16 md:px-30 md:py-20 text-secondary 
+      className="min-h-screen px-10 py-16 md:px-30 md:py-20 text-secondary 
     "
     >
       {/* Header */}

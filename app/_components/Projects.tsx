@@ -8,8 +8,8 @@ import ProjectCard from "./ProjectCard";
 function Projects() {
   return (
     <section
-      id="projects"
-      className="px-10 py-16 md:px-30 md:py-20 text-secondary relative
+      id="works"
+      className="px-10 py-16 md:px-30 md:py-20 text-secondary min-h-screen relative
     after:pointer-events-none
     after:absolute
     after:bottom-[700px]
