@@ -5,7 +5,7 @@ import { socialLinks } from "./Navbar";
 
 export default function SocialSidebar() {
   return (
-    <aside className="text-secondary fixed left-0 top-0 z-50 hidden h-screen w-20 sm:flex">
+    <aside className="text-secondary absolute left-0 top-0 z-50 hidden h-screen w-20 sm:flex">
       <div className="mx-auto flex flex-col items-center">
         <div className="h-50 w-px bg-secondary" />
 

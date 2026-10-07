@@ -23,9 +23,7 @@ function Hero() {
     px-10 py-16
     sm:px-30
     sm:py-20
-
-    bg-[radial-gradient(circle_at_82%_35%,rgba(199,120,221,0.16),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.02),transparent_42%)]
-    
+    bg-[radial-gradient(circle_at_82%_35%,rgba(199,120,221,0.16),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.02),transparent_42%)] 
     after:pointer-events-none
     after:absolute
     after:bottom-[35px]

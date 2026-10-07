@@ -1,5 +1,6 @@
 import Hero from "./_components/Hero";
 import Navbar from "./_components/Navbar";
+import Projects from "./_components/Projects";
 import SocialSidebar from "./_components/SocialSidebar";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <SocialSidebar />
       <main className="mx-auto w-full">
         <Hero />
+        <Projects />
       </main>
     </div>
   );
