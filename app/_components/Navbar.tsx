@@ -19,8 +19,8 @@ const navbarItems = [
     href: "#works",
   },
   {
-    name: "about-us",
-    href: "#about-us",
+    name: "about-me",
+    href: "#about-me",
   },
   {
     name: "contacts",

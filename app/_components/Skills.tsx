@@ -15,25 +15,25 @@ function Skills() {
       className="px-10 py-16 md:px-30 md:py-20 text-secondary relative
     after:pointer-events-none
     after:absolute
-    after:top-[100px]
-    after:right-0
+    after:top-[300px]
+    after:left-0
     after:h-[60px]
     after:w-[50px]
     after:border
-    after:border-primary
-    after:border-r-0
+    after:border-secondary
+    after:border-l-0
     after:opacity-70
     after:content-['']
 
     before:pointer-events-none
     before:absolute
-    before:top-[150px]
-    before:right-0
+    before:top-[350px]
+    before:left-0
     before:h-[50px]
     before:w-[30px]
     before:border
-    before:border-primary
-    before:border-r-0
+    before:border-secondary
+    before:border-l-0
     before:opacity-70
     before:content-['']
     "
