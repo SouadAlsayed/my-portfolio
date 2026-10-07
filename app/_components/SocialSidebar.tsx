@@ -1,7 +1,7 @@
 "use client";
 import { HugeiconsIcon } from "@hugeicons/react";
 
-import { socialLinks } from "./Navbar";
+import { socialLinks } from "../_lib/data";
 
 export default function SocialSidebar() {
   return (

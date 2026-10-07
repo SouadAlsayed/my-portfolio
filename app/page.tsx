@@ -1,25 +1,15 @@
-import About from "./_components/About";
-import Contacts from "./_components/Contacts";
-import Footer from "./_components/Footer";
 import Hero from "./_components/Hero";
-import Navbar from "./_components/Navbar";
+import About from "./_components/About";
 import Projects from "./_components/Projects";
 import Skills from "./_components/Skills";
-import SocialSidebar from "./_components/SocialSidebar";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <SocialSidebar />
-      <main className="mx-auto w-full">
-        <Hero />
-        <Projects />
-        <Skills />
-        <About />
-        <Contacts />
-        <Footer />
-      </main>
-    </div>
+    <>
+      <Hero />
+      <Projects />
+      <Skills />
+      <About />
+    </>
   );
 }

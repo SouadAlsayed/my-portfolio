@@ -1,71 +1,36 @@
 "use client";
 import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  Cancel01Icon,
-  Github01Icon,
-  Linkedin01Icon,
-  Mail01Icon,
-  Menu03Icon,
-} from "@hugeicons/core-free-icons";
-import Link from "next/link";
+import { Cancel01Icon, Menu03Icon } from "@hugeicons/core-free-icons";
 import { useState } from "react";
-export const navbarItems = [
-  {
-    name: "home",
-    href: "#home",
-  },
-  {
-    name: "works",
-    href: "#works",
-  },
-  {
-    name: "about-me",
-    href: "#about-me",
-  },
-  {
-    name: "contacts",
-    href: "#contacts",
-  },
-];
-export const socialLinks = [
-  {
-    icon: Github01Icon,
-    href: "https://github.com/SouadAlsayed",
-    label: "github",
-  },
-  {
-    icon: Linkedin01Icon,
-    href: "https://www.linkedin.com/in/souad-alsayed/",
-    label: "linkedin",
-  },
-  {
-    icon: Mail01Icon,
-    href: "mailto:souadalsayed.dev@gmail.com",
-    label: "email",
-  },
-];
+import { navbarItems, socialLinks } from "../_lib/data";
+import { useScrollToSection } from "../_lib/useScrollToSection";
+
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
+  const scrollToSection = useScrollToSection();
 
   return (
     <header className="absolute inset-x-0 z-50 top-0 text-secondary">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-end sm:justify-center px-6 z-50">
-        <div className="hidden items-center gap-10 sm:flex">
+        <ul className="hidden items-center gap-10 sm:flex">
           {navbarItems.map((i) => (
-            <Link
-              href={i.href}
-              key={i.name}
-              className="transition-colors hover:text-white"
-            >
-              <span className="text-primary">#</span>
-              {i.name}
-            </Link>
+            <li key={i}>
+              <button
+                className="transition-colors hover:text-white"
+                onClick={() => {
+                  scrollToSection(i);
+                }}
+              >
+                <span className="text-primary">#</span>
+                {i}
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Mobile menu button */}
         <button
-          className="sm:hidden z-50"
+          className="cursor-pointer sm:hidden z-50"
           onClick={() => setOpenMenu((menu) => !menu)}
         >
           <HugeiconsIcon
@@ -85,17 +50,20 @@ function Navbar() {
           />
           {/* Mobile navigation */}
           <div className="absolute left-0 right-0 top-16 z-50 border-t border-secondary bg-background px-6 py-6 shadow-lg sm:hidden">
-            <div className="flex flex-col gap-6">
-              {navbarItems.map((item) => (
-                <Link
-                  href={item.href}
-                  key={item.name}
-                  className="transition-colors hover:text-white"
-                  onClick={() => setOpenMenu(false)}
-                >
-                  <span className="text-primary">#</span>
-                  {item.name}
-                </Link>
+            <ul className="flex flex-col gap-6">
+              {navbarItems.map((i) => (
+                <li key={i}>
+                  <button
+                    className="transition-colors hover:text-white"
+                    onClick={() => {
+                      setOpenMenu(false);
+                      scrollToSection(i);
+                    }}
+                  >
+                    <span className="text-primary">#</span>
+                    {i}
+                  </button>
+                </li>
               ))}
               <div className="flex justify-center items-center gap-5">
                 {socialLinks.map((l) => (
@@ -110,12 +78,12 @@ function Navbar() {
                     <HugeiconsIcon
                       size={24}
                       icon={l.icon}
-                      className="transition-colors hover:text-white"
+                      className="transition-colors hover:text-primary"
                     />
                   </a>
                 ))}
               </div>
-            </div>
+            </ul>
           </div>
         </>
       )}

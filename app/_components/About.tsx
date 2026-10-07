@@ -42,7 +42,7 @@ function About() {
           </p>
 
           <Link
-            href="/"
+            href="/about-me"
             className="w-fit px-5 py-2 border border-primary bg-background hover:bg-[rgba(199,120,221,0.16)] transition-colors text-white"
           >
             Read more

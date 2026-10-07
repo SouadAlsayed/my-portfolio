@@ -1,3 +1,27 @@
+import {
+  Github01Icon,
+  Linkedin01Icon,
+  Mail01Icon,
+} from "@hugeicons/core-free-icons";
+
+export const navbarItems = ["home", "works", "about-me", "contacts"];
+export const socialLinks = [
+  {
+    icon: Github01Icon,
+    href: "https://github.com/SouadAlsayed",
+    label: "github",
+  },
+  {
+    icon: Linkedin01Icon,
+    href: "https://www.linkedin.com/in/souad-alsayed/",
+    label: "linkedin",
+  },
+  {
+    icon: Mail01Icon,
+    href: "mailto:souadalsayed.dev@gmail.com",
+    label: "email",
+  },
+];
 export type Project = {
   id: number;
   title: string;

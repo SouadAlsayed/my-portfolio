@@ -1,10 +1,12 @@
 "use client";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { navbarItems, socialLinks } from "./Navbar";
+import { navbarItems, socialLinks } from "../_lib/data";
 import Link from "next/link";
 import { ArrowUp02Icon } from "@hugeicons/core-free-icons";
+import { useScrollToSection } from "../_lib/useScrollToSection";
 
 function Footer() {
+  const scrollToSection = useScrollToSection();
   return (
     <footer className="px-10 pt-14 pb-8 md:px-30 text-secondary">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-3 justify-between md:items-start">
@@ -20,14 +22,16 @@ function Footer() {
         <nav className="flex flex-col gap-2">
           <h3 className="text-white">Quick links</h3>
           <ul className="flex flex-col gap-1">
-            {navbarItems.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
+            {navbarItems.map((i) => (
+              <li key={i}>
+                <button
                   className="inline-block py-1 transition-colors hover:text-white"
+                  onClick={() => {
+                    scrollToSection(i);
+                  }}
                 >
-                  {link.name}
-                </Link>
+                  {i}
+                </button>
               </li>
             ))}
           </ul>
@@ -58,7 +62,7 @@ function Footer() {
         <p>© {new Date().getFullYear()} Souad Alsayed. All rights reserved.</p>
 
         <Link
-          href="#"
+          href="/"
           className="flex w-fit items-center gap-2 transition-colors hover:text-white"
         >
           Back to top
