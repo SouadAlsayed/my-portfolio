@@ -2,7 +2,6 @@ import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 import SectionHeader from "./SectionHeader";
-import Image from "next/image";
 import { projects } from "../_lib/data";
 import ProjectCard from "./ProjectCard";
 
@@ -38,7 +37,7 @@ function Projects() {
     >
       {/* Header */}
       <div className="flex justify-between items-center mb-16 md:mb-20">
-        <SectionHeader widthClass="w-3/5" />
+        <SectionHeader title="projects" widthClass="w-3/5" />
         <div className="flex items-center sm:text-lg hover:text-white transition-colors">
           <Link href="#projects" className=" whitespace-nowrap w-fit px-2 py-2">
             View all

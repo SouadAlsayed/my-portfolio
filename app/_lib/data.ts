@@ -90,3 +90,60 @@ export const projects: Project[] = [
     github: "https://github.com/SouadAlsayed/fast-react-pizza",
   },
 ];
+
+export type Skill = {
+  name: string;
+  category:
+    | "Languages"
+    | "Frameworks & Libraries"
+    | "Styling"
+    | "State & Data"
+    | "Databases"
+    | "Fundamentals"
+    | "Tools";
+};
+
+export const skills: Skill[] = [
+  // Languages
+  { name: "HTML", category: "Languages" },
+  { name: "CSS", category: "Languages" },
+  { name: "JavaScript", category: "Languages" },
+  { name: "TypeScript", category: "Languages" },
+  { name: "C++", category: "Languages" },
+  { name: "SQL", category: "Languages" },
+
+  // Frameworks & Libraries
+  { name: "React", category: "Frameworks & Libraries" },
+  { name: "Next.js", category: "Frameworks & Libraries" },
+  { name: "React Router", category: "Frameworks & Libraries" },
+  { name: "Leaflet", category: "Frameworks & Libraries" },
+
+  // Styling
+  { name: "Tailwind CSS", category: "Styling" },
+  { name: "Styled Components", category: "Styling" },
+  { name: "Responsive Design", category: "Styling" },
+
+  // State & Data
+  { name: "React Query", category: "State & Data" },
+  { name: "Redux Toolkit", category: "State & Data" },
+  { name: "Context API", category: "State & Data" },
+  { name: "Zustand", category: "State & Data" },
+  { name: "REST APIs", category: "State & Data" },
+
+  // Databases
+  { name: "SQL", category: "Databases" },
+  { name: "Supabase", category: "Databases" },
+
+  // Fundamentals
+  { name: "Data Structures", category: "Fundamentals" },
+  { name: "Algorithms", category: "Fundamentals" },
+  { name: "Object-Oriented Programming", category: "Fundamentals" },
+  { name: "Problem Solving", category: "Fundamentals" },
+  { name: "Operating Systems", category: "Fundamentals" },
+  { name: "Computer Networks", category: "Fundamentals" },
+
+  // Tools
+  { name: "Git", category: "Tools" },
+  { name: "GitHub", category: "Tools" },
+  { name: "VS Code", category: "Tools" },
+];
