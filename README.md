@@ -4,8 +4,9 @@ A personal portfolio website showcasing my front-end projects, skills, and backg
  
 **Live site:** [https://souadalsayed-dev.vercel.app/](https://souadalsayed-dev.vercel.app/)
  
-<!-- Add a screenshot: ![Portfolio preview](./public/preview.png) -->
-<img width="1911" height="871" alt="image" src="https://github.com/user-attachments/assets/735f7af2-168e-4c79-baaa-52b6bf162895" />
+
+<img width="1897" height="868" alt="image" src="https://github.com/user-attachments/assets/2ec98615-01af-42de-86ec-4461cc440e5e" />
+
 
  
 ## Features
