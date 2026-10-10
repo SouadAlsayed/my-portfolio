@@ -115,7 +115,7 @@ export default function AboutPage() {
 
             <div className="mt-2 flex flex-wrap gap-3">
               <Link
-                href="/projects"
+                href="/#works"
                 className="w-fit border border-primary bg-background px-5 py-2 text-white transition-colors hover:bg-[rgba(199,120,221,0.16)]"
               >
                 View my work

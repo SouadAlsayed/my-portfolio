@@ -56,14 +56,14 @@ function Hero() {
           a little more memorable.
         </p>
         <button
-          className="w-fit px-5 py-2 border border-primary bg-background hover:bg-[rgba(199,120,221,0.16)] transition-colors"
+          className="w-fit px-5 py-2 border border-primary bg-background hover:bg-[rgba(199,120,221,0.16)] transition-colors cursor-pointer"
           onClick={() => {
             document
-              .getElementById("contacts")
+              .getElementById("works")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
         >
-          Contact me
+          View my work
         </button>
       </div>
       <div className={frameClasses}>

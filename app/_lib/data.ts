@@ -4,7 +4,7 @@ import {
   Mail01Icon,
 } from "@hugeicons/core-free-icons";
 
-export const navbarItems = ["home", "works", "about-me", "contacts"];
+export const navbarItems = ["home", "works", "skills", "about-me", "contacts"];
 export const socialLinks = [
   {
     icon: Github01Icon,
